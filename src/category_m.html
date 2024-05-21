@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category Management</title>
+    <link rel="stylesheet" href="output.css">
+    <script src="https://kit.fontawesome.com/6ea446285e.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-darkgreen">
+    <div class=" h-screen grid grid-cols-5 p-4 gap-4">
+        <!-- sidebar -->
+        <aside class=" hidden md:block col-span-1 bg-white rounded-2xl  font-semibold overflow-y-clip ">
+            <div class="my-4 flex flex-col mx-4 gap-2   ">
+                <a href="dashboard.html" class="">
+                <div class="py-3 px-2 hover:bg-darkgreen rounded-lg hover:text-white  ">
+                    Dashboard
+                </div></a>
+                <a href="user_m.html">
+                <div class="py-3 px-2 hover:bg-darkgreen rounded-lg hover:text-white  ">
+                    User Management
+                </div></a>
+                <a href="category_m.html">
+                <div class="py-3 px-2 hover:bg-darkgreen rounded-lg hover:text-white  ">
+                    Category Management
+                </div></a>
+                <a href="item_m.html">
+                <div class="py-3 px-2 hover:bg-darkgreen rounded-lg hover:text-white  ">
+                    Item Management
+                </div></a>
+                <a href="supplier_m.html">
+                <div class="py-3 px-2 hover:bg-darkgreen rounded-lg hover:text-white r ">
+                    <a href="supplier_m.html">Supplier Management
+                </div></a>
+                <a href="purchase_m.html">
+                <div class="py-3 px-2 hover:bg-darkgreen rounded-lg hover:text-white  ">
+                    Purchase Order
+                </div></a>
+                <a href="receive_m.html">
+                <div class="py-3 px-2 hover:bg-darkgreen rounded-lg hover:text-white  ">
+                    Receiving Orders
+                </div></a>
+                <a href="inventory_m.html">
+                <div class="py-3 px-2 hover:bg-darkgreen rounded-lg hover:text-white  ">
+                    Inventory Management
+                </div></a>
+                <a href="index.html">
+                <div class="py-3 px-2 hover:bg-red-500 rounded-lg hover:text-white  ">
+                    Logout
+                </div></a>
+            
+                
+            </div>
+
+            
+        </aside>
+
+
+            <!-- main -->
+            <main class="col-span-5 bg-white rounded-2xl md:col-span-4 p-4">
+                <h1 class="font-bold text-2xl text-darkgreen ">Category  Management</h1>
+                <h3 class="my-4 font-semibold text-lg">Add new Category</h3>
+                
+                <form method="post" action="../php/add_category.php">
+                    <!-- submit -->
+                    
+                
+                <!-- add user -->
+                <div class="flex gap-8 ">
+                    <!-- category type -->
+                    <div class="flex flex-col gap-1">
+                        <label for="catFor" class="font-bold">Category for:</label>
+                        <select name="catFor" id="catFor" class="px-2 py-3 border-2 w-56">
+                            <option value="roles">Roles</option>
+                            <option value="items">Items</option>
+                            <option value="department">Department</option>
+
+                        </select>
+                    </div>
+                    <!-- Company name -->
+                    <div class="flex flex-col gap-1">
+                        <label for="catName" class="font-bold">Category name:</label>
+                        <input type="text" class="px-2 py-3 border-2 w-64" name="catName" id="catName" placeholder="Category name">
+                    </div>
+                    <!-- submit category -->
+                    <div class=" flex flex-col px-2 mt-7 ">
+                        <div></div>
+                        <button type="submit" class="px-2 py-3 bg-midgreen text-white w-32 flex gap-2 justify-center">Add
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                            </svg>
+                            
+                        </button>
+                    </div>
+                    
+                
+                </form>
+                </div>
+                <!-- users table -->
+                <h2 class="text-darkgreen font-bold text-2xl my-12">Categories: </h2>
+                <!-- table -->
+                
+                    <table class=" table-fixed w-full uppercase text-left  shadow-2xl rounded-2xl border-1 ">
+                        <thead class="">
+                            <tr class="bg-slate-300  ">
+                            
+                                <th class="px-2 py-3">Category For</th>
+                                <th class="px-2 py-3">Category name</th>
+                            
+                                <th class="px-2 py-3">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                
+                </tbody>
+                    </table>
+        
+                
+
+            </main>
+        
+    </div>
+
+    
+    
+</html>
